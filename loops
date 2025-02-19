@@ -1,0 +1,7 @@
+if __name__ == '__main__':
+    # Read the integer from input
+    n = int(input())
+
+    # Print the square of each number from 0 to n-1
+    for i in range(n):
+        print(i * i)
