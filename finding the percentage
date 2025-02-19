@@ -1,0 +1,22 @@
+# Read the number of student records
+n = int(input())
+
+# Create a dictionary to store student names and their marks
+student_marks = {}
+
+# Read student records
+for _ in range(n):
+    # Split the input into name and marks
+    line = input().split()
+    name = line[0]
+    marks = list(map(float, line[1:]))
+    student_marks[name] = marks
+
+# Read the query name
+query_name = input()
+
+# Calculate the average marks for the queried student
+average_marks = sum(student_marks[query_name]) / len(student_marks[query_name])
+
+# Print the average marks rounded to 2 decimal places
+print(f"{average_marks:.2f}")
