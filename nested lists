@@ -1,0 +1,23 @@
+# Read the number of students
+n = int(input())
+
+# Create a list to store students' names and grades
+students = []
+
+# Read the student details
+for _ in range(n):
+    name = input()
+    grade = float(input())
+    students.append([name, grade])
+
+# Find the unique grades and sort them in ascending order
+grades = sorted(set([grade for name, grade in students]))
+
+# The second lowest grade will be the second element in the sorted list
+second_lowest_grade = grades[1]
+
+# Find all students who have the second lowest grade
+second_lowest_students = [name for name, grade in students if grade == second_lowest_grade]
+
+# Sort the names alphabetically
+second_lowest_students.sort()
